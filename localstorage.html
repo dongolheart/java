@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <script>
+        /*
+        local storage - to store data locally in browser of client
+
+        local storage.setItem(key,Value)- to store data in local storage
+
+        local storage.getItem(key) - to get data from local storage*/
+        //setItem, getItem
+        // key ="info"
+        // value="javascript"
+        // localStorage.setItem("info","javascript")
+        // localStorage.setItem(key,value)
+        // document.write(localStorage.getItem(key))
+        //to clear data from localstorage
+    //     localStorage.clear()
+    key="info"
+    value={"name":"javascript","duration":"1 month"}
+    //Json.stringify(obj)-> converts json object to JSON string 
+    value2 = JSON.stringify(value)
+    localStorage.setItem(key,value2)
+
+    new_value =localStorage.getItem(key) //string
+    final_value = JSON.parse(new_value)
+
+    //destruction oabject
+    let{name,duration} =final_value
+    document.write(name)
+    // </script>
+</body>
+</html>

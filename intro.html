@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript
+    </title>
+
+</head>
+<body id="root">
+    <h1 id="myHeading"></h1>
+    <h3></h3>
+
+
+    <input type="text" id="input1">
+    <button onclick="myfuction1()">Click me</button>
+    <button onclick="toggle()">Switch</button>
+    <script>
+        document.write("hello woorld<br>")
+        str="Hello world"
+        document.write(str)
+
+        document.getElementById("myHeading").innerHTML="Welcome to js"
+
+        // str=prompt("enter a message here")
+        document.write("<br>",str)
+        //  str=document.getElementById("input1").value
+
+        //  window.print()
+
+        document.write(str)
+
+        function myfuction1(){
+             str = document.getElementById("input1").value
+            
+            document.getElementById("myHeading").innerHTML=str
+        }
+        state = 0
+        function toggle(){
+            if(state==0){
+                state=1
+                document.getElementById("root").style.
+                backgroundImage="img/n4.jpg"
+                document.getElementById("root").style.color="white"
+            }
+            else{
+                state=0
+                document.getElementById("root").style.
+                backgroundColor="white"
+                document.getElementById("root").style.color="black"
+
+            }
+        }
+            
+    </script>
+</body>
+</html>

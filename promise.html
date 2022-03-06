@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise fuction</title>
+</head>
+<body>
+    <script>
+        news = [{title:"first", content:"this is first news"},
+        {title:"second",content:"this is second news"},
+        {title:"third",content:"this is third news"}
+    ]
+
+    const showNews =()=>{
+        setTimeout(()=>{
+            news.map(item=> document.write(`<h1>${item.title}:${item.content}</p>`))
+    
+        },3000)
+    }
+       
+
+    const addNews = (add,next)=> {
+        return promise = new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            let error= false
+            if(!error){
+                news.push(add)
+                
+                resolve()
+            }
+            else{
+                reject("failed to add new news")
+            }
+            news.push(add)
+        resolve()
+        },4000)
+           
+        })}
+
+        new_news = {title:"New",
+        content:"added by callback"}
+    addNews(new_news,showNews)
+
+    addNews(new_news)
+    .then(showNews)
+    .catch(error=>console.log(error))
+
+    </script>
+    
+</body>
+</html>
